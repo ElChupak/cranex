@@ -1,0 +1,125 @@
+.news-article {
+    overflow: hidden;
+    height: 100%;
+    border-radius: 4px;
+    box-shadow: var(--main-shadow);
+    background: var(--color-light);
+
+    &__image {
+        transition: transform 0.3s ease-in-out;
+        &:hover {
+            transform: scale(1.05);
+        }
+
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 13px;
+    }
+
+    &__text {
+        padding: 15px 24px;
+    }
+
+    &__descr {
+        margin: 0;
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-gray);
+    }
+
+    &__meta {
+        margin-bottom: 17px;
+    }
+
+    &__link {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        color: var(--color-ebony);
+        transition: color 0.3s ease-in-out;
+
+        &:focus {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 2px;    
+        }
+
+        &:hover {
+            color: var(--color-primary);
+        }
+
+        &:active {
+            color: var(--color-active);
+        }
+    }
+
+    &--small {
+        .news-article__descr {
+            display: none;
+        }
+
+        @include tablet {
+            .news-article__descr {
+                display: block;
+            }
+        }
+
+        .news-article__text {
+            padding: 12px 24px;
+        }
+    }
+}
+
+.article-meta {
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--color-storm);
+
+    &__item {
+        position: relative;
+        color: inherit;
+
+        &:not(:last-child) {
+            margin-right: 21px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                right: -13px;
+                top: 3px;
+                width: 1px;
+                height: 11px;
+                color: inherit;
+                background-color: var(--color-storm);
+            }
+        }
+    }
+
+    &--comments {
+        padding-left: 24px;
+        background-image: url('../img/comments.svg');
+        background-position: left center;
+        background-size: 16px 16px;
+        background-repeat: no-repeat;
+
+        @include mobile {
+            display: inline-block;
+        }
+    }
+}
+
+a.article-meta__item {
+    &:focus {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;    
+    }
+
+    &:hover {
+        color: var(--color-primary);
+    }
+
+    &:active {
+        color: var(--color-active);
+    }
+}

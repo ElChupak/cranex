@@ -1,0 +1,86 @@
+.how-we-do {
+    padding-top: 45px;
+    padding-bottom: 119px;
+
+    @include minitablet {
+        padding-top: 20px;
+    }
+
+    &__list {
+        counter-reset: section;
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        margin-bottom: 60px;
+    }
+
+    &__item { 
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        grid-column: 3 span;
+        padding-right: 15px;
+
+        @include minitablet {
+            grid-column: 6 span;
+        }
+
+        @include mobile {
+            align-items: center;
+
+            p {
+                text-align: center;
+            }
+        }
+
+        &::before {
+            counter-increment: section;
+            content: '0'counter(section);
+            margin-bottom: 18px;
+            font-weight: 700;
+            font-size: 46px;
+            line-height: 130%;
+            color: #d7dadd;
+        }
+
+        &:not(:last-child) {
+            &::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 30px;
+                height: 1px;
+                width: 74%;
+                background-image: url('../img/how-we-do-line.svg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+
+                @include tablet {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__subtitle {
+        margin: 0;
+        margin-bottom: 9px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        color: var(--color-ebony);
+    }
+
+    &__descr {
+        margin: 0;
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-storm);
+    }
+}

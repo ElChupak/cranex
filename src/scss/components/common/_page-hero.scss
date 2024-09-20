@@ -1,0 +1,196 @@
+.page-hero {
+    padding-top: 153px;
+    padding-bottom: 80px;
+    min-height: 600px;
+    background-position: right -8px top;
+    background-color: var(--color-athens);
+    background-repeat: no-repeat;
+
+    @include minitablet {
+        padding-bottom: 40px;
+        min-height: 500px;
+    }
+
+    @include minitablet {
+        padding-bottom: 80px;
+        min-height: auto;
+    }
+
+    &__breadcrumbs {
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 23px;
+        font-weight: 700;
+        max-width: 600px;
+        font-size: 72px;
+        line-height: 130%;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--color-ebony);
+
+        &--small {
+            font-size: 64px;
+            line-height: 120%;
+            letter-spacing: 1px;
+            text-transform: initial;
+        }
+
+        &--mb {
+            margin-bottom: 60px;
+        }
+
+        @include mobile {
+            font-size: 40px;
+            line-height: 54px;
+        }
+    }
+
+    &__descr {
+        margin: 0;
+        max-width: 600px;
+        font-size: 20px;
+        line-height: 150%;
+        color: var(--color-storm);
+
+        @include mobile {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__meta {
+        .article-meta__item {
+            font-size: 16px;
+            line-height: 160%;
+
+            a.article-meta__item {
+                font-weight: 700;
+                color: var(--color-primary);
+            }
+        }
+
+        time.article-meta__item {
+            padding-left: 28px;
+            background-image: url('../img/time.svg');
+            background-position: left center;
+            background-size: 20px 20px;
+            background-repeat: no-repeat; 
+        }
+
+        .article-meta--comments {
+            background-size: 20px 20px;
+        }
+    }
+
+    &__social {
+        svg {
+            fill: var(--color-storm) !important;
+        }
+    }
+
+    &--services {
+        background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('../img/bg/services-hero-bg.png');
+    }
+
+    &--services-inner {
+        background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('../img/bg/services-inner-hero-bg.png');
+    }
+
+    &--work {
+        background-image: url('../img/bg/work-hero-bg.png');
+
+        @include middledesk {
+            background-image: url(../img/bg/work-inner-hero-bg.png);
+        }
+    }
+
+    &--work-inner {
+        background-color: var(--color-light);
+        background-image: url('../img/bg/work-inner-hero-bg.png');    
+        background-position: right -8px top 48px;    
+    }
+
+    &--about {
+        background-image: url('../img/bg/about-hero-bg.png');
+
+        @include minidesk {
+            background-image: url(../img/bg/work-inner-hero-bg.png);
+        }
+    }
+
+    &--positions {
+        background-image: url('../img/bg/positions-hero-bg.png');
+        background-position: right -9px bottom;
+
+        @include minidesk {
+            background-position: right -330px bottom;
+        }
+
+        @include minitablet {
+            background-image: url(../img/bg/work-inner-hero-bg.png);
+            background-position: right bottom;
+        }
+    }
+
+    &--news {
+        background-image: url('../img/bg/news-hero-bg.png');
+        background-position: right -9px bottom;
+
+        @include minidesk {
+            background-image: url(../img/bg/work-inner-hero-bg.png);
+        }
+    }
+
+    &--post {
+        .page-hero__title {
+            margin-bottom: 48px;
+            font-size: 64px;
+            line-height: 120%;
+            letter-spacing: 1px;
+            text-transform: initial;
+            max-width: none;
+
+            @include minitablet {
+                font-size: 45px;
+                line-height: 58px;
+            }
+
+            @include mobile {
+                font-size: 35px;
+                line-height: 48px;
+            }
+        }
+
+        @include minidesk {
+            margin-bottom: 30px;
+        }
+
+        a.article-meta__item {
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+    }
+
+    &--contacts {
+        background-image: url('../img/bg/contacts-hero-bg.png');
+        background-position: right -9px bottom;
+
+        @include middledesk {
+            background-image: url(../img/bg/work-inner-hero-bg.png);
+        }
+    }
+}

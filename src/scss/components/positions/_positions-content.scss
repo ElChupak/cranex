@@ -1,0 +1,203 @@
+.positions-content {
+    padding: 120px 0 102px 0;
+
+    @include tablet {
+        padding: 50px 0;
+        grid-column: 12 span;
+        justify-items: center;
+    }
+
+    &__info {
+        @include mobile {
+            justify-items: center;
+        }
+    }
+
+    &__left {
+        grid-column: 7 span;
+
+        @include tablet {
+            grid-column: 12 span;
+        }
+    }
+
+    &__right {
+        display: flex;
+        justify-content: flex-end;
+        grid-column: 5 span;
+
+        @include tablet {
+            justify-content: center;
+            grid-column: 12 span;
+        }
+
+        @include mobile {
+            width: 90vw;
+
+        }
+    }
+}
+
+.positions-list {
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 23px;
+        }
+    }
+}
+
+
+.positions-item {
+    display: flex;
+    padding: 32px 40px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-light);
+    border: 1px solid #e5e8ed;
+    border-radius: 4px;
+
+    @include mobile {
+        flex-direction: column;
+        width: 90vw;
+    }
+
+    &__meta {
+        margin-bottom: 8px;
+        font-size: 14px;
+        line-height: 150%;
+        color: var(--color-storm);
+
+        @include mobile {
+            text-align: center;
+        }
+    }
+
+    &__city {
+        position: relative;
+        margin-right: 21px;
+        padding-left: 22px;
+        background-image: url('../img/city.svg');
+        background-position: left center;
+        background-size: 16px 16px;
+        background-repeat: no-repeat;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: -13px;
+            top: 50%;
+            width: 1px;
+            height: 11px;
+            background-color: currentColor;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__time {
+        padding-left: 22px;
+        background-image: url('../img/time.svg');
+        background-position: left center;
+        background-size: 16px 16px;
+        background-repeat: no-repeat;
+    }
+
+    &__title {
+        margin: 0;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        color: var(--color-ebony);
+
+        @include mobile {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }
+
+    &__link {
+        padding: 11px 31px;
+        display: inline-block;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+
+        transition: color 0.3s ease-in-out;
+
+        &:focus {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 2px;    
+        }
+
+        &:hover {
+            color: var(--color-primary);
+        }
+
+        &:active {
+            color: var(--color-active);                
+        }
+    }
+}
+
+.positions-looking {
+    width: 390px;
+
+    @include tablet {
+        width: 100%;
+        text-align: center;
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 26px;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 150%;
+        color: var(--color-ebony);
+
+    }
+
+    &__descr {
+        margin: 0;
+        margin-bottom: 47px;
+        font-size: 18px;
+        line-height: 150%;
+        color: var(--color-gray);
+    }
+
+    &__btns {
+
+        @include mobile {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            button {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__btn {
+        &--subs {
+            margin: 0 10px;
+            padding-inline: 44px;
+            transition: color 0.3s ease-in-out;
+
+            &:focus {
+                outline: 2px solid var(--color-primary);
+                outline-offset: 2px;    
+            }
+    
+            &:hover {
+                color: var(--color-primary);
+            }
+    
+            &:active {
+                color: var(--color-active);                
+            }
+        }
+
+        &--send {
+            padding-inline: 54px;
+        }
+    }
+}

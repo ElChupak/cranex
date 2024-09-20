@@ -1,0 +1,23 @@
+.worldwide {
+    background-color: var(--color-athens);
+    padding-top: 81px;
+    padding-bottom: 116px;
+
+    @include mobile {
+        padding: 40px 0;
+        padding-bottom: 60px;
+    }
+
+    &__title {
+        margin-bottom: 60px;
+    }
+}
+
+
+.worldwide-map {
+    svg {
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+    }
+}

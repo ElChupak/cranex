@@ -1,0 +1,219 @@
+.hero {
+    position: relative;
+
+    &__content {
+        max-width: 590px;
+        position: absolute;
+        top: 220px;
+        left: 17%;
+        z-index: 100;
+
+        @include tablet {
+            top: 150px;
+            left: 12%;
+        }
+
+        @include minitablet {
+            max-width: 410px;
+            top: 135px;
+        }
+
+        @include mobile {
+            left: 50%;
+            transform: translateX(-50%);
+            top: 90px;
+        }
+
+    }
+
+    &__image {
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__next {
+        position: absolute;
+        right: 32px;
+        top: 50%;
+        z-index: 30;
+        background-color: var(--color-light);
+        transform: translateY(-50%);
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__prev {
+        position: absolute;
+        left: 32px;
+        top: 50%;
+        z-index: 30;
+        background-color: var(--color-light);
+        transform: translateY(-50%);
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__wrapper {
+        padding-bottom: 240px;
+
+        @include mobile {
+            padding-bottom: 40px;
+
+        }
+
+    }
+
+
+    &__pag {
+        counter-reset: pag;
+        display: flex;
+
+        @include mobile {
+            display: none;
+        }
+
+        .swiper-pagination-bullet {
+            display: flex;
+            flex-direction: column;
+            border-radius: 0;
+            width: 178px;
+            height: auto;
+            text-align: left;
+            background-color: transparent;
+            opacity: 1;
+
+            &::before {
+                counter-increment: pag;
+                content: '0'counter(pag);
+                font-weight: 700;
+                font-size: 28px;
+                line-height: 150%;
+                color: rgba(#fff, 0.3);
+                transition: color 0.3s ease-in-out;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &__bar {
+        position: relative;
+        overflow: hidden;
+        border-radius: 100px;
+        width: 100%;
+        height: 2px;
+        background-color: rgba(#fff, .3);
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-light);
+            transform-origin: left;
+            transform: scaleX(0);
+        }
+    }
+
+    &__btns {
+        .btn {
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+
+        @include minitablet {
+            display: flex;
+            justify-content: space-between;
+
+            .btn {
+                padding: 10px 39px;
+                font-size: 16px;
+                line-height: 16px;
+                max-width: 200px;
+                &:not(:last-child) {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        @include mobile {
+            flex-direction: column;
+
+            .btn {
+                &:last-child {
+                    margin-top: 20px;
+                }
+            }
+
+        }
+    }
+}
+
+.swiper-pagination-bullet-active {
+
+    &::before {
+        color: var(--color-light) !important;
+    }
+    .hero__bar {
+        &::after {
+            transform: scaleX(1);
+            transition: transform var(--hero-slider-speed) ease-in-out;
+
+        }
+    }
+}
+
+.hero-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.hero-slide {
+    height: 988px;
+    background-color: var(--color-gray);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &--first {
+        background-image: url(../img/bg/hero-bg-1.jpg); 
+    }
+
+    &--second {
+        background-image: url(../img/bg/hero-bg-2.jpg); 
+    }  
+
+    &--third {
+        background-image: url(../img/bg/hero-bg-3.jpg);
+    } 
+
+    &--fourth {
+        background-image: url(../img/bg/hero-bg-4.jpg); 
+
+    }
+
+    @include tablet {
+        height: 900px;
+    }
+
+    @include minitablet {
+        background-position: top 50% right 30%;
+    }
+
+    @include mobile {
+        height: 590px;
+    }
+    
+}

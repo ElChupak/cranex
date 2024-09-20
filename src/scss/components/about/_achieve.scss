@@ -1,0 +1,225 @@
+.achieve {
+    padding: 120px 0; 
+    background-color: var(--color-light);
+    background-image: url('../img/bg/achieve-bg.png');
+    background-position: right 480px;
+    background-repeat: no-repeat;
+
+    @include tablet {
+        padding-bottom: 60px;
+    }
+
+    @include minitablet {
+        padding: 40px 0; 
+    }
+
+    &__item {
+        @include flex-column-center;
+
+        max-width: 260px;
+        grid-column: 3 span;
+        padding-top: 69px;
+        background-position: top center;
+        background-size: 48px 48px;
+        background-repeat: no-repeat;
+
+        &--reccom {
+            background-image: url('../img/like.svg');
+        }
+        
+        &--renov {
+            background-image: url('../img/paint.svg');
+        }
+
+        &--spec {
+            background-image: url('../img/helmet.svg');
+        }
+
+        &--finish {
+            background-image: url('../img/pant.svg');
+        }
+
+        @include minitablet {
+            grid-column: 6 span;
+        }
+
+    }
+
+    &__value {
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 46px;
+        line-height: 130%;
+        color: var(--color-primary);
+
+        @include minidesk {
+            font-size: 36px;
+            line-height: 50px;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 150%;
+        text-align: center;
+        color: var(--color-ebony);
+    }
+
+    &__list {
+        margin-bottom: 238px;
+
+        @include minitablet {
+            margin-bottom: 150px;
+        }
+
+        @include mobile {
+            justify-items: center;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: start;
+
+        @include tablet {
+            margin-bottom: -40px;
+
+        }
+
+        @include minitablet {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: -100px;
+        }
+    }
+
+    &__info {
+        position: relative;
+        z-index: 10;
+        top: -130px;
+        left: -32px;
+        flex-shrink: 0;
+        border-radius: 4px;
+        padding: 75px 64px 60px 96px ;
+        width: 735px;
+        box-shadow: var(--main-shadow);
+        background-color: var(--color-light);
+
+        @include minidesk {
+            max-width: 55%;
+            padding: 75px 0px 60px 70px;
+        }
+
+        @include minitablet {
+            max-width: 100%;
+            left: auto;
+
+        }
+
+        @include mobile {
+            padding: 30px 10px 60px 35px
+        }
+
+    }
+
+    &__image {
+
+        @include minidesk {
+            max-width: 45%;
+        }
+
+        @include minitablet {
+            max-width: 100%;
+        }
+    }
+    
+}
+
+.quote {
+    margin: 0;
+
+    &__content {
+        position: relative;
+        margin-bottom: 40px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: -59px;
+            top: 0;
+            width: 28px;
+            height: 20px;
+            background-image: url('../img/braces.svg');
+            background-repeat: no-repeat;
+
+            @include minidesk {
+                left: -45px;
+            }
+
+            @include mobile {
+                left: -32px;
+                background-size: 20px 16px;
+
+            }
+        }
+        p {
+            margin: 0;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 150%;
+            color: var(--color-ebony);
+
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+
+            @include tablet {
+                font-size: 18px;
+                margin-bottom: -90px;
+            }
+
+            @include mobile {
+                font-size: 16px;
+            }
+        }
+
+        @include tablet {
+            margin-bottom: 100px;
+        }
+    }
+
+    &__author {
+        margin-bottom: 5px;
+        display: block;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-ebony);
+
+    }
+
+    &__pos {
+
+        @include mobile {
+            display: block;
+            max-width: 160px;
+        }
+    }
+
+    &__footer {
+        padding-top: 20px;
+        font-size: 14px;
+        line-height: 150%;
+        color: var(--color-storm);
+        background-image: url('../img/signature.svg');
+        background-size: 100px 68px;
+        background-position: right 0;
+        background-repeat: no-repeat;
+
+
+        @include mobile {
+            background-position: right 20px;
+            background-size: 100px 60px;
+        }
+    }
+}

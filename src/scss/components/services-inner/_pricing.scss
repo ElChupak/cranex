@@ -1,0 +1,140 @@
+.pricing {
+    position: relative;
+    padding: 81px 0 36px 0;
+    background-color: var(--color-athens);
+
+    @include mobile {
+        padding-top: 50px;
+    }
+    &__descr {
+        margin-bottom: 60px;
+    }
+
+    &-decorate {
+        position: absolute;
+        left: -10px;
+        top: 0;
+    }
+
+    &__container {
+        position: relative;
+        z-index: 10;
+    }
+}
+
+.table-wrapper {
+    overflow: hidden;
+    border: 1px solid #e5e8ed;
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: var(--main-shadow);
+    background: var(--color-light);
+    z-index: 5;
+
+    @include tablet {
+        overflow-x: auto;
+    }
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+
+    @include tablet {
+        width: 1200px;
+    }
+
+    &__heading {
+        margin-bottom: 2px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 150%;
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--color-ebony);
+    }
+
+    &__per {
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 150%;
+        text-align: center;
+        color: var(--color-storm);
+
+    }
+
+    &__th {
+        padding-top: 31px;
+        padding-bottom: 24px;
+        padding-right: 23px;
+
+        &:first-child {
+            padding-left: 24px;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 150%;
+            text-align-last: left;
+            color: var(--color-ebony);
+            vertical-align: bottom;
+            
+        }
+    }
+
+    &__body {
+        .table__row {
+            &:nth-child(odd) {
+                background-color: var(--color-athens);
+            }
+
+            &:last-child {
+                .table__col {
+                    padding: 32px 0;
+                }
+            }
+        }
+    }
+
+    &__col {
+        padding: 16px 0;
+        padding-right: 11px;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-gray);
+
+        &:first-child {
+            padding-left: 24px;
+            text-align-last: left;
+        }
+
+        .btn {
+            padding: 0 20px;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 36px;
+            text-transform: uppercase;
+
+            &:focus {
+                outline: 2px solid var(--color-primary);
+                outline-offset: 2px;    
+            }
+
+            @include tablet {
+                padding: 0 10px;
+            }
+        }
+    }
+
+    &__check {
+        display: inline-block;
+        vertical-align: middle;
+        width: 24px;
+        height: 24px;
+        font-size: 0;
+        background-image: url('../img/table-check.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}

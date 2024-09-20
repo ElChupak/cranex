@@ -1,0 +1,29 @@
+.learn-more {
+    @include flex-all-center;
+
+    @include minitablet {
+        padding-top: 40px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    &__subtitle {
+        margin: 0;
+        margin-right: 40px;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 150%;
+        color: var(--color-ebony);
+
+        @include minitablet {
+            margin-right: 10px;
+            line-height: 40px;
+        }
+    }
+
+    &__btn {
+        @include minitablet {
+            margin-top: 30px;  
+        }
+    }
+}

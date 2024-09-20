@@ -1,0 +1,105 @@
+.portfolio-item {
+    overflow: hidden;
+    max-height: 440px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    box-shadow: var(--main-shadow);
+    background: var(--color-light);
+    transition: transform 0.3s ease-in-out;
+
+    @include minitablet {
+        max-height: 380px;
+    }
+
+    @include mobile {
+        max-height: 100vh;
+    }
+
+
+    &__image {
+        transition: transform 0.3s ease-in-out;
+
+    }
+
+    &__content {
+        @include flex-column-center;
+        padding: 10px;
+        padding-top: 16px;
+        padding-bottom: 23px;
+        background-color: white;
+        transform: translateY(0px);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 3px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        color: var(--color-ebony);
+        text-align: center;
+
+        @include minidesk {
+            font-size: 18px;
+        }
+    }
+
+    &__descr {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 150%;
+        color: var(--color-storm);
+    }
+
+    &__btn {
+        margin-top: 34px;
+        border: 1px solid currentColor;
+        border-radius: 4px;
+        padding: 13px 31px;
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: var(--color-primary);
+        transition: margin-top 0.3s ease-in-out;
+
+        @include middledesk {
+            display: none;
+        }
+    }
+
+    &:focus {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;    
+    }
+
+    &:hover {
+
+        .portfolio-item__btn {
+            margin-bottom: 0;
+        }
+
+        .portfolio-item__content {
+            transform: translateY(-70px);
+        }
+
+        @include middledesk {
+            .portfolio-item__content {
+                transform: translateY(-20px);
+            }
+        }
+
+        .portfolio-item__btn {
+            margin-top: 24px;
+        }
+
+        .portfolio-item__image {
+          transform: scale(1.05) translateY(-20px);
+
+        }
+        
+    }
+
+}

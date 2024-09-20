@@ -1,0 +1,114 @@
+.related {
+    padding: 180px 0 102px 0;
+    background-color: var(--color-light);
+
+    @include mobile {
+        padding: 100px 0 60px 0;
+    }
+
+    &__top {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 48px;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        padding-bottom: 12px;
+        max-width: 710px;
+    }
+
+    &__learn {
+        margin-top: 80px;
+    }
+
+    &__items {
+        padding: 0 25px 102px 25px;
+        margin: 0 -25px -100px -25px;
+
+        @include minitablet {
+            padding-bottom: 60px;
+        }
+
+        .swiper-slide {
+            user-select: none;
+        }
+
+        .slider-visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @include tablet {
+            .portfolio-item__title {
+                min-height: 54px;
+            }
+        }
+
+        @include minitablet {
+            .portfolio-item__title {
+                min-height: auto;
+                letter-spacing: -0.2px;
+            }
+        }
+
+    }
+
+    &--work-inner {
+        @include mobile {
+            padding-top: 40px;
+        }
+    }
+}
+
+.related-item {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    box-shadow: var(--main-shadow);
+    background: var(--color-light);
+
+    &__content {
+        @include flex-column-center;
+        padding: 10px;
+        padding-top: 16px;
+        padding-bottom: 23px;
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 3px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        color: var(--color-ebony);
+    }
+
+    &__descr {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 150%;
+        color: var(--color-storm);
+    }
+
+    &__btn {
+        display: none;
+        margin-top: 24px;
+        border: 1px solid currentColor;
+        border-radius: 4px;
+        padding: 13px 31px;
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: var(--color-primary);
+    }
+}

@@ -1,0 +1,77 @@
+.decisions {
+    padding-top: 80px;
+    padding-bottom: 30px;
+    background-color: var(--color-athens);
+
+    @include minitablet {
+        padding-top: 40px;
+    }
+
+    .grid {
+        @include mobile {
+            display: flex;
+        }
+    }
+
+    &__left {
+        grid-column: 5 span;
+
+        img {
+            margin-bottom: -85px;
+            border-radius: 4px;
+        }
+
+        @include minitablet {
+            display: none;
+            visibility: hidden;
+        }
+    }
+
+    &__right {
+        padding-left: 103px;
+        grid-column: 7 span;
+
+        @include tablet {
+            padding-left: 0;
+        }
+
+        @include minitablet {
+            grid-column: 12 span;
+        }
+
+    }
+
+    &__title {
+        margin-bottom: 62px;
+
+        @include tablet {
+            margin-bottom: 20px;
+        }
+
+    }
+
+    &__item {
+        position: relative;
+        padding-left: 37px;
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-gray);
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 3px;
+            width: 20px;
+            height: 20px;
+            background-image: url('../img/decisions-check.svg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+}

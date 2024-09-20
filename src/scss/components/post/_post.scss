@@ -1,0 +1,139 @@
+.post {
+    &__cover {
+        width: 100%;
+        margin-top: -79px;
+        object-fit: cover;
+    }
+
+    &__wrapper {
+        padding: 0 15px;
+        margin: 0 auto;
+        max-width: 840px;
+    }
+
+    &__share {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-ebony);
+        
+        svg {
+            fill: var(--color-storm) !important;
+            opacity: 1;
+        }
+
+        span {
+            margin-right: 10px;
+        }
+    }
+
+    &__content {
+        padding-top: 77px;
+        padding-bottom: 60px;
+
+        @include mobile {
+            padding-top: 30px;
+        }
+
+        * {
+            margin-bottom: 28px;
+            font-size: 16px;
+            line-height: 160%;
+            color: var(--color-gray);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        h2 {
+            margin: 0;
+            margin-bottom: 25px;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 150%;
+            color: var(--color-ebony);
+
+        }
+
+        h3 {
+            margin: 0;
+            margin-bottom: 25px;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 150%;
+            color: var(--color-ebony);
+        }
+
+        p {
+            margin: 0;
+            margin-bottom: 27px;
+            font-size: 16px;
+            line-height: 160%;
+            color: var(--color-gray);
+        }
+
+        blockquote {
+            padding: 22px 5px 21px 57px;
+            margin: 0;
+            margin-bottom: 28px;
+            position: relative;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 150%;
+            color: var(--color-ebony);
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: -2px;
+                top: 22px;
+                width: 28px;
+                height: 20px;
+                background-image: url('../img/braces.svg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            @include mobile {
+                padding: 0;
+                padding-top: 50px;
+            }
+        }
+
+        ul {
+            margin: 0;
+            margin-bottom: 28px;
+            padding: 0;
+            list-style-type: none;
+            font-size: 16px;
+            line-height: 160%;
+            color: var(--color-gray);
+
+            li {
+                position: relative;
+                padding-left: 31px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 4px;
+                    width: 16px;
+                    height: 16px;
+                    background-image: url('../img/check-list.svg');
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 3px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,127 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+
+// компоненты страницы
+@import "./components/common/slider-nav";
+@import "./components/common/page-hero";
+@import "./components/common/footer";
+@import "./components/common/portfolio-item";
+@import "./components/work-inner/work-images";
+@import "./components/news/news-article";
+
+
+
+
+// подключения компонентов страницы (большие компоненты)
+// Home
+@import "./components/common/header";
+@import "./components/home/hero";
+@import "./components/home/bureau.scss";
+@import "./components/home/mission";
+@import "./components/home/services-sec";
+@import "./components/home/portfolio-sec";
+@import "./components/home/partners";
+@import "./components/home/testimonials";
+@import "./components/home/facts";
+@import "./components/home/recent-news";
+@import "./components/home/contacts-sec";
+
+
+// Services
+@import "./components/services/services-content";
+
+
+// Services Inner
+@import "./components/services-inner/we-offer";
+@import "./components/services-inner/how-we-do";
+@import "./components/services-inner/services-benefits";
+@import "./components/services-inner/related";
+@import "./components/services-inner/pricing";
+
+
+// Work
+@import "./components/work/portfolio";
+@import "./components/work/clients";
+
+
+// Work Inner
+@import "./components/work-inner/hero-work-inner";
+@import "./components/work-inner/project-goal";
+@import "./components/work-inner/decisions";
+
+
+// About
+@import "./components/about/achieve";
+@import "./components/about/about-mission";
+@import "./components/about/history";
+@import "./components/about/team";
+@import "./components/about/worldwide";
+
+
+// Positions
+@import "./components/positions/positions-content";
+@import "./components/positions/benefits";
+
+
+//News
+@import "./components/news/categories";
+
+
+// Post
+@import "./components/post/hero-post";
+@import "./components/post/post";
+@import "./components/post/comments";
+@import "./components/post/comment-article";
+@import "./components/post/post-form";
+
+
+//Contacts
+@import "./components/contacts/contacts";
+@import "./components/contacts/contacts-info";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// подключения компонентов страницы (маленькие компоненты)
+@import "./components/common/nav";
+@import "./components/common/header-contacts";
+@import "./components/home/video-block";
+@import "./components/common/form-field";
+@import "./components/common/breadcrumbs";
+@import "./components/common/learn-more";
+@import "./components/common/social";
+
+
+
+
+
+

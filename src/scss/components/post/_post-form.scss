@@ -1,0 +1,57 @@
+.post-form {
+    padding-top: 36px;
+    padding-bottom: 180px;
+
+    @include tablet {
+        padding-bottom: 80px;
+    }
+
+    @include mobile {
+        padding-bottom: 50px;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+
+    .form-field__caption {
+        margin-bottom: 9px;
+        font-size: 16px;
+    }
+
+    .form-field__input {
+        height: 52px;
+        font-size: 16px;
+    }
+
+    .post-form__field {
+        width: 48%;
+
+        &--big {
+            margin-top: 22px;
+            margin-bottom: 48px;
+            width: 100%;
+
+            .form-field__input {
+                height: 100px;
+            }
+
+            @include mobile {
+                margin-top: 0;
+            }
+        }
+
+        @include mobile {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+    }
+}

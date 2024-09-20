@@ -1,0 +1,8 @@
+.bureau {
+    padding-bottom: 60px;
+    background-color: var(--color-light);
+
+    @include mobile {
+        padding-bottom: 20px;
+    }
+}
