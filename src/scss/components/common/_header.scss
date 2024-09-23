@@ -4,6 +4,8 @@
 
   &__container {
     @include flex-all-sb;
+
+    transition: all .3s ease-in-out;
   }
 
   &__nav {
@@ -54,6 +56,18 @@
     top: 0;
     width: 100%;
   }
+
+  &.scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-light);
+    z-index: 1000;
+    box-shadow: 0 1.75rem 1.875rem rgba(154, 156, 165, .08), 0 1.25rem 1rem rgba(154, 156, 165, .05), 0 .5rem .625rem rgba(154, 156, 165, .04), 0 .25rem .25rem rgba(30, 33, 44, .03);
+    transition: background-color 0.3s ease-in-out;
+    animation: nav-show .3s;
+  } 
 }
 
 .logo {
@@ -86,6 +100,28 @@
     display: block;
     visibility: visible;
     opacity: 1;
+  }
+}
+
+
+@keyframes nav-show {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes nav-hide {
+
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
   }
 }
 
