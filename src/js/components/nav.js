@@ -21,4 +21,10 @@ window.addEventListener('scroll', ()=>{
             homeBody.style.marginTop = 'auto';
         }
     }
+
+    if(!headerEl.classList.contains('scrolled') && scroll < sectionEl[0].offsetHeight) {
+        headerEl.style.boxShadow = 'none';
+    } else {
+        headerEl.style.boxShadow = '';
+    }
 });

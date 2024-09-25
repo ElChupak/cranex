@@ -23,7 +23,7 @@ a {
 }
 
 .site-container {
-  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+  overflow: hidden; // If you use position: sticky on your site, remove this setting.
 }
 
 .is-hidden {
@@ -612,13 +612,18 @@ a {
 .burger--active::before {
   top: 50%;
   transform: rotate(45deg);
-  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  background-color: var(--color-primary);
+  height: 3px;
 }
 
 .burger--active::after {
   top: 50%;
   transform: rotate(-45deg);
-  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  background-color: var(--color-primary);
+  height: 3px;
+
 }
 
 .burger--active .burger__line {
@@ -630,23 +635,23 @@ a {
   opacity: 1;
 }
 
-// .overlay {
-//   position: fixed;
-//   left: 0;
-//   right: 0;
-//   top: 0;
-//   bottom: 0;
-//   z-index: 800;
-//   background-color: rgba(#000, 0.6);
-//   opacity: 0;
-//   visibility: hidden;
-//   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 200;
+  background-color: rgba(#000, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
-//   &--active {
-//     opacity: 1;
-//     visibility: visible;
-//   }
-// }
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
 
 .modal {
   @include mobile {

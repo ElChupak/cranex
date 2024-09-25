@@ -2,6 +2,7 @@ const burger = document.querySelector('.burger'),
     menu = document.querySelector('.header__nav'),
     overlay = document.querySelector('.overlay'),
     headerBar = document.querySelector('.header'),
+    scrolled = document.querySelector('.scrolled'),
     scroll = calcScroll();
 
 const disScroll = () => {
@@ -9,12 +10,8 @@ const disScroll = () => {
   let scroll = calcScroll();
 
   document.body.style.overflow = 'hidden';
-  // document.body.style.marginRight = `${scroll}px`;
-  // headerBar.style.marginRight = `${scroll}px`;
-  // burger.style.marginRight = `${scroll}px`;
-
-  // headerBar.style.paddingRight = `${scroll}px`;
-
+  document.body.style.marginRight = `${scroll}px`;
+  burger.style.marginRight = `${scroll}px`;
   document.body.dataset.position = pagePosition;
   document.body.style.top = -pagePosition + 'px';  
 }
@@ -41,7 +38,6 @@ function calcScroll() {
   div.style.height = '50px';
   div.style.overflowY = 'scroll';
   div.style.visibility = 'hidden';
-
   document.body.appendChild(div);
   let scrollWidth = div.offsetWidth - div.clientWidth;
   div.remove();
@@ -64,11 +60,22 @@ burger.addEventListener('click', (e) => {
     enScroll();
   }
 
-  if(headerBar.classList.contains('header__nav--active')) {
-    headerBar.style.backgroundColor = '#6e6e6e';
+  if(headerBar.classList.contains('scrolled') && menu.classList.contains('header__nav--active')) {
+    headerBar.style.backgroundColor = '#fff0';
+    headerBar.style.boxShadow = 'none';
   } else {
     headerBar.style.backgroundColor = '';
+    if(headerBar.classList.contains('scrolled')) {
+      headerBar.style.boxShadow = 'var(--main-shadow)';
+    }
   }
+  
+  // if(!headerBar.classList.contains('scrolled')) {
+  //   headerBar.style.backgroundColor = '#666666';
+  //   // headerBar.style.boxShadow = 'var(--main-shadow)';
+  // } else {
+  //   headerBar.style.backgroundColor = 'var(--color-light)';
+  // }
 
 });
 
