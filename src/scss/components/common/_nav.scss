@@ -2,10 +2,13 @@
   &__list {
     @include flex-v-center;
 
+    position: relative;
+
     @include tablet {
       display: block;
       margin-bottom: 40px;
     }
+
   }
 
   &__item {
@@ -43,4 +46,5 @@
       color: var(--color-primary);
     }
   }
+
 }

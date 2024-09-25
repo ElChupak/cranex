@@ -98,15 +98,15 @@ a {
   }
 }
 
-.dis-scroll {
-  position: relative;
-  overflow: hidden;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%
-}
+// .dis-scroll {
+//   position: relative;
+//   overflow: hidden;
+//   height: 100vh;
+//   position: fixed;
+//   left: 0;
+//   top: 0;
+//   width: 100%
+// }
 
 
 .main-descr {
@@ -560,9 +560,10 @@ a {
   --burger-height: 20px;
   --burger-line-height: 2px;
 
-  position: absolute;
-  right: 15px;
-  top: 23px;
+  // position: absolute;
+  position: relative;
+  // right: 15px;
+  // top: 23px;
   z-index: 1000;
   display: none;
   border: none;
@@ -629,23 +630,23 @@ a {
   opacity: 1;
 }
 
-.overlay {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 500;
-  background-color: rgba(#000, 0.6);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+// .overlay {
+//   position: fixed;
+//   left: 0;
+//   right: 0;
+//   top: 0;
+//   bottom: 0;
+//   z-index: 800;
+//   background-color: rgba(#000, 0.6);
+//   opacity: 0;
+//   visibility: hidden;
+//   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
-  &--active {
-    opacity: 1;
-    visibility: visible;
-  }
-}
+//   &--active {
+//     opacity: 1;
+//     visibility: visible;
+//   }
+// }
 
 .modal {
   @include mobile {

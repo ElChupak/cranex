@@ -20,7 +20,7 @@
 
         @include mobile {
             left: 50%;
-            transform: translateX(-50%);
+            transform: translateX(-50%) !important;
             top: 90px;
         }
 
