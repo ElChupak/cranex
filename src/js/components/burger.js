@@ -50,6 +50,18 @@ const toggleClasses = () => {
   overlay.classList.toggle('overlay--active');
 }
 
+function headerStyle() {
+  if(headerBar.classList.contains('scrolled') && menu.classList.contains('header__nav--active')) {
+    headerBar.style.backgroundColor = '#fff0';
+    headerBar.style.boxShadow = 'none';
+  } else {
+    headerBar.style.backgroundColor = '';
+    if(headerBar.classList.contains('scrolled')) {
+      headerBar.style.boxShadow = 'var(--main-shadow)';
+    }
+  }
+}
+
 
 burger.addEventListener('click', (e) => {
   toggleClasses();
@@ -60,22 +72,7 @@ burger.addEventListener('click', (e) => {
     enScroll();
   }
 
-  if(headerBar.classList.contains('scrolled') && menu.classList.contains('header__nav--active')) {
-    headerBar.style.backgroundColor = '#fff0';
-    headerBar.style.boxShadow = 'none';
-  } else {
-    headerBar.style.backgroundColor = '';
-    if(headerBar.classList.contains('scrolled')) {
-      headerBar.style.boxShadow = 'var(--main-shadow)';
-    }
-  }
-  
-  // if(!headerBar.classList.contains('scrolled')) {
-  //   headerBar.style.backgroundColor = '#666666';
-  //   // headerBar.style.boxShadow = 'var(--main-shadow)';
-  // } else {
-  //   headerBar.style.backgroundColor = 'var(--color-light)';
-  // }
+  headerStyle();
 
 });
 
@@ -88,6 +85,8 @@ overlay?.addEventListener('click', (e) => {
     } else {
       enScroll();
     }
+
+    headerStyle();
   }
 });
 
